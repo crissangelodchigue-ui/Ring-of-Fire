@@ -1,0 +1,65 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070b14;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .star-bg {
+            background-image: 
+                radial-gradient(white 1px, transparent 0),
+                radial-gradient(rgba(249,115,22,0.3) 1px, transparent 0);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.02); }
+        }
+        .animate-glow {
+            animation: pulse-glow 5s ease-in-out infinite;
+        }
+        @keyframes float-star {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-10px) rotate(8deg); opacity: 1; }
+        }
+        .floating-star {
+            animation: float-star 3.5s ease-in-out infinite;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1329;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f97316;
+        }
+
+/* Interactive marker behavior: the point and label stay still; only the halo moves. */
+.map-marker { position: absolute; z-index: 3; }
+.map-marker > .marker-halo { position: absolute; width: 2.2rem; height: 2.2rem; left: 50%; top: 0.65rem; transform: translate(-50%, -50%); border-radius: 9999px; border: 2px solid rgba(249,115,22,.65); box-shadow: 0 0 0 5px rgba(249,115,22,.08); animation: marker-halo-float 2.8s ease-in-out infinite, marker-halo-blink 1.8s ease-in-out infinite; pointer-events: none; }
+@keyframes marker-halo-float { 0%,100% { transform: translate(-50%, -50%) translateY(0); } 50% { transform: translate(-50%, -50%) translateY(-7px); } }
+@keyframes marker-halo-blink { 0%,100% { opacity:.35; } 50% { opacity:1; } }
+.modal-tag-volcano { background:#ea580c; }
+.modal-tag-earthquake { background:#dc2626; }
+.modal-tag-trench { background:#2563eb; }
+.modal-open { overflow:hidden; }
+#modal-backdrop > div { max-height:92vh; overflow-y:auto; }
+#modal-img { display:block; }
+
+/* References: clickable, white by default, orange on hover. */
+#references .reference-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+#references .reference-link:hover,
+#references .reference-link:focus-visible {
+    color: #f97316;
+}
+

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE 1: The Ring of Fire - Philippine Archipelago Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#070b14] text-slate-100 min-h-screen flex flex-col selection:bg-orange-500 selection:text-white">
+
+    <header class="sticky top-0 z-40 bg-[#070b14]/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#cover" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center shadow-lg shadow-orange-500/30 group-hover:scale-105 transition">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-orange-500 uppercase block">Challenge 1 Model</span>
+                    <span class="text-base font-extrabold tracking-tight text-white">Ring of Fire <span class="text-slate-400 font-normal">| Philippines</span></span>
+                </div>
+            </a>
+
+            <!-- Continuous scrolling anchor links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#cover" class="text-slate-300 hover:text-orange-400 transition">Overview</a>
+                <a href="#tectonic" class="text-slate-300 hover:text-orange-400 transition">Tectonic Position</a>
+                <a href="#interactive-map" class="text-orange-400 font-semibold transition flex items-center space-x-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                    <span>Interactive Map</span>
+                </a>
+                <a href="#volcanoes" class="text-slate-300 hover:text-orange-400 transition">Volcanoes</a>
+                <a href="#earthquakes" class="text-slate-300 hover:text-orange-400 transition">Earthquakes</a>
+                <a href="#summary" class="text-slate-300 hover:text-orange-400 transition">Summary</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col">
+
+        <section id="cover" class="relative min-h-[calc(100vh-5rem)] flex flex-col justify-center overflow-hidden py-20">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#070b14] via-[#070b14]/70 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=80" alt="Atmospheric Background" class="w-full h-full object-cover filter brightness-[0.25] contrast-125 scale-105">
+                <div class="absolute inset-0 star-bg opacity-40 z-10"></div>
+            </div>
+
+            <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl text-center md:text-left mb-16">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-orange-600/30 border border-orange-500/50 backdrop-blur-md mb-6 shadow-lg shadow-orange-900/40">
+                        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse"></span>
+                        <span class="text-xs font-extrabold tracking-wider uppercase text-orange-300">CHALLENGE 1: Ring of Fire Model</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-6 leading-none">
+                        THE RING OF FIRE: <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 bg-clip-text text-transparent">PHILIPPINE ARCHIPELAGO</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mb-10 leading-relaxed font-normal">
+                        The Philippines sits directly on the <strong class="text-white font-semibold">Pacific Ring of Fire</strong>, trapped between two converging tectonic plates. Oceanic plates sink under the islands at deep trenches on both sides, forging numerous volcanoes and generating intense seismic activity.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="#interactive-map" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-bold text-base shadow-xl shadow-orange-600/40 transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                            <span>Explore Interactive Map</span>
+                        </a>
+                        <a href="#tectonic" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#111827]/90 hover:bg-slate-800 border border-slate-700/80 text-white font-semibold text-base transition flex items-center justify-center space-x-3 shadow-lg">
+                            <span>Why Tectonically Active? &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tectonic" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <div class="text-center md:text-left mb-12">
+                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Geological Foundation</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Why the Philippines is Tectonically Active</h2>
+                <p class="text-slate-400 mt-2 text-base">Four fundamental plate tectonic mechanisms that shape the Philippine archipelago.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 relative overflow-hidden group hover:border-orange-500/50 transition">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-orange-500/10 rounded-full blur-xl group-hover:bg-orange-500/20 transition"></div>
+                    <div class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 flex items-center justify-center font-bold text-lg mb-4">01</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Double Subduction Zone</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">The archipelago is sandwiched between the Philippine Sea Plate subducting from the east and the Eurasian Plate subducting from the west.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 relative overflow-hidden group hover:border-orange-500/50 transition">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-amber-500/10 rounded-full blur-xl group-hover:bg-amber-500/20 transition"></div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center font-bold text-lg mb-4">02</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Magma Generation</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Sinking oceanic slabs reach high mantle temperatures, releasing water and gases that melt overlying mantle rock to fuel active stratovolcanoes.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 relative overflow-hidden group hover:border-orange-500/50 transition">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-red-500/10 rounded-full blur-xl group-hover:bg-red-500/20 transition"></div>
+                    <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-lg mb-4">03</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Philippine Fault System</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">A 1,200 km-long strike-slip fault zone slices through the entire archipelago from Luzon to Mindanao, accommodating severe shear stresses.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 relative overflow-hidden group hover:border-orange-500/50 transition">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-yellow-500/10 rounded-full blur-xl group-hover:bg-yellow-500/20 transition"></div>
+                    <div class="w-10 h-10 rounded-xl bg-yellow-600/20 text-yellow-400 flex items-center justify-center font-bold text-lg mb-4">04</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Deep Oceanic Trenches</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Bordered by major deep-sea trenches like the Manila Trench and Philippine Trench where seafloor plummets into the Earth's mantle.</p>
+                </div>
+            </div>
+
+            <!-- Philippines and Tectonic Plates information -->
+            <div class="mt-10 bg-slate-900/90 border border-slate-800 rounded-2xl p-7 sm:p-9">
+                <div class="w-12 h-12 rounded-xl bg-yellow-600/20 text-yellow-400 flex items-center justify-center font-bold text-xl mb-5">+</div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">The Philippines and Tectonic Plates</h3>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    The Philippines is located near the boundaries of the <em class="text-white">Philippine Sea Plate</em> and the <em class="text-white">Eurasian Plate</em>. The movement of these plates causes pressure beneath the country. This pressure can produce earthquakes along faults and trenches. Subduction can also create volcanoes and volcanic arcs.
+                </p>
+            </div>
+        </section>
+
+        <section id="interactive-map" class="py-20 bg-[#060913] star-bg relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center md:text-left">
+                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Interactive Geological Model</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Interactive Ring of Fire Map</h2>
+                <p class="text-slate-400 text-sm mt-2">Click any floaty marker (Volcano, Earthquake, Manila Trench, or Philippine Trench) to inspect detailed specs in a centered popup card.</p>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- MAP CONTAINER -->
+                <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-[#070b16] rounded-3xl border border-slate-800 shadow-2xl overflow-hidden flex items-center justify-center">
+                    
+                    <!-- Concentric Ring of Fire Radar Rings -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40 animate-glow" viewBox="0 0 1000 800" fill="none">
+                        <ellipse cx="500" cy="400" rx="420" ry="360" stroke="#f97316" stroke-width="1.5" stroke-dasharray="6 6" />
+                        <ellipse cx="500" cy="400" rx="300" ry="260" stroke="#eab308" stroke-width="1" stroke-dasharray="4 4" />
+                        <ellipse cx="500" cy="400" rx="180" ry="160" stroke="#f97316" stroke-width="1" stroke-opacity="0.6" />
+                    </svg>
+
+                    <!-- Sparkling Star Bling Accents -->
+                    <div class="absolute top-12 right-20 text-white floating-star text-2xl drop-shadow-[0_0_10px_rgba(255,255,255,0.9)] pointer-events-none">⭐</div>
+                    <div class="absolute bottom-20 left-16 text-white floating-star text-xl drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] pointer-events-none" style="animation-delay: 1.2s;">✨</div>
+
+                    <!-- Philippine Archipelago Silhouette SVG (Golden-yellow) -->
+                    <div class="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
+                        <svg class="w-[75%] h-[85%] drop-shadow-[0_0_25px_rgba(234,179,8,0.3)]" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Luzon Silhouette -->
+                            <path d="M280,70 C310,65 330,85 335,110 C340,135 320,150 315,175 C310,200 330,225 320,250 C310,270 290,260 280,240 C270,220 285,190 275,170 C265,150 250,140 255,110 C260,80 260,75 280,70 Z" fill="#eab308" opacity="0.9"/>
+                            <!-- Palawan Silhouette -->
+                            <path d="M190,320 C210,360 230,400 250,450 C252,455 248,460 242,455 C222,410 200,360 182,320 C180,315 185,315 190,320 Z" fill="#eab308" opacity="0.85"/>
+                            <!-- Visayas Islands -->
+                            <path d="M360,260 C380,265 390,285 385,310 C380,335 365,345 355,330 C345,315 350,280 360,260 Z" fill="#eab308" opacity="0.9"/>
+                            <path d="M420,290 C440,295 450,320 440,345 C430,360 410,350 415,325 C420,300 410,285 420,290 Z" fill="#eab308" opacity="0.9"/>
+                            <path d="M370,390 C390,385 400,410 395,435 C390,450 375,445 370,425 C365,405 360,395 370,390 Z" fill="#eab308" opacity="0.9"/>
+                            <path d="M440,380 C465,385 480,410 475,440 C470,470 450,480 435,450 C420,420 425,375 440,380 Z" fill="#eab308" opacity="0.9"/>
+                            <!-- Mindanao Silhouette -->
+                            <path d="M410,500 C470,490 510,510 535,560 C560,610 565,650 540,710 C520,750 470,760 450,720 C430,680 450,650 435,610 C420,570 390,560 380,530 C375,515 395,505 410,500 Z" fill="#eab308" opacity="0.9"/>
+                        </svg>
+                    </div>
+
+                    <!-- INTERACTIVE CLICKABLE MARKERS OVERLAY (Floaty before being clicked) -->
+                    <div class="absolute inset-0 z-20 pointer-events-none">
+
+                        <!-- ONLY TWO TRENCHES: Manila Trench & Philippine Trench -->
+                        <div class="pointer-events-auto absolute top-[30%] left-[15%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group floating-star" onclick="openModal('Manila Trench')">
+                            <div class="px-3 py-1.5 bg-red-600/90 border border-red-300 rounded-lg shadow-2xl flex items-center space-x-1.5 transition transform group-hover:scale-110">
+                                <span class="text-xs font-black text-white tracking-wider">≡ MANILA TRENCH</span>
+                            </div>
+                        </div>
+
+                        <div class="pointer-events-auto absolute top-[58%] right-[12%] transform -translate-y-1/2 cursor-pointer group floating-star" style="animation-delay: 1s;" onclick="openModal('Philippine Trench')">
+                            <div class="px-3 py-1.5 bg-red-600/90 border border-red-300 rounded-lg shadow-2xl flex items-center space-x-1.5 transition transform group-hover:scale-110">
+                                <span class="text-xs font-black text-white tracking-wider">≡ PHILIPPINE TRENCH</span>
+                            </div>
+                        </div>
+
+                        <!-- Volcano Markers (Floaty) -->
+                        <div class="pointer-events-auto absolute top-[36%] left-[45%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 0.5s;" onclick="openModal('Mt. Pinatubo')">
+                            <div class="inline-block px-2 py-0.5 bg-black/80 border border-orange-500 rounded text-[10px] font-bold text-yellow-300 mb-0.5 shadow">Mt. Pinatubo</div>
+                            <div class="w-6 h-6 mx-auto bg-orange-600 border-2 border-white rounded-sm transform rotate-45 flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="pointer-events-auto absolute top-[41%] left-[44%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 1.5s;" onclick="openModal('Taal Volcano')">
+                            <div class="inline-block px-2 py-0.5 bg-black/80 border border-orange-500 rounded text-[10px] font-bold text-yellow-300 mb-0.5 shadow">Taal Volcano</div>
+                            <div class="w-6 h-6 mx-auto bg-orange-600 border-2 border-white rounded-sm transform rotate-45 flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="pointer-events-auto absolute top-[45%] right-[38%] transform -translate-y-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 0.8s;" onclick="openModal('Mayon Volcano')">
+                            <div class="inline-block px-2 py-0.5 bg-black/80 border border-orange-500 rounded text-[10px] font-bold text-yellow-300 mb-0.5 shadow">Mayon Volcano</div>
+                            <div class="w-6 h-6 mx-auto bg-orange-600 border-2 border-white rounded-sm transform rotate-45 flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="pointer-events-auto absolute top-[61%] left-[53%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 2s;" onclick="openModal('Mt. Kanlaon')">
+                            <div class="inline-block px-2 py-0.5 bg-black/80 border border-orange-500 rounded text-[10px] font-bold text-yellow-300 mb-0.5 shadow">Mt. Kanlaon</div>
+                            <div class="w-6 h-6 mx-auto bg-orange-600 border-2 border-white rounded-sm transform rotate-45 flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Earthquake Epicenter Markers (Floaty) -->
+                        <div class="pointer-events-auto absolute top-[26%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 0.3s;" onclick="openModal('1990 Luzon M7.8')">
+                            <div class="w-10 h-10 rounded-full border-2 border-red-500 animate-ping absolute -inset-2 opacity-75"></div>
+                            <div class="relative w-7 h-7 bg-red-600 border-2 border-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            </div>
+                            <div class="mt-1 px-2 py-0.5 bg-red-950/90 border border-red-500 rounded text-[9px] font-bold text-white shadow whitespace-nowrap">1990 Luzon M7.8</div>
+                        </div>
+
+                        <div class="pointer-events-auto absolute bottom-[18%] left-[54%] transform -translate-x-1/2 cursor-pointer group text-center floating-star" style="animation-delay: 1.7s;" onclick="openModal('1976 Moro Gulf M8.0')">
+                            <div class="w-10 h-10 rounded-full border-2 border-red-500 animate-ping absolute -inset-2 opacity-75"></div>
+                            <div class="relative w-7 h-7 bg-red-600 border-2 border-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition">
+                                <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                            </div>
+                            <div class="mt-1 px-2 py-0.5 bg-red-950/90 border border-red-500 rounded text-[9px] font-bold text-white shadow whitespace-nowrap">1976 Moro Gulf M8.0</div>
+                        </div>
+
+                    </div>
+
+                    <!-- MAP LEGEND (Bottom Left Overlay) -->
+                    <div class="absolute bottom-4 left-4 z-30 bg-[#0f172a]/90 backdrop-blur-md border border-slate-700 p-3 rounded-2xl shadow-xl text-xs space-y-2 max-w-xs">
+                        <div class="font-bold text-orange-400 uppercase tracking-wider mb-1">Map Legend</div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-orange-600 border border-white transform rotate-45 flex items-center justify-center flex-shrink-0"></div>
+                            <span class="text-slate-300">Active Volcano (Stratovolcano/Caldera)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-4 h-4 bg-red-600 rounded-full border border-white flex-shrink-0"></div>
+                            <span class="text-slate-300">Earthquake Epicenter (M7.8 - M8.0)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="px-2 py-0.5 bg-red-600 text-white font-bold rounded text-[9px] flex-shrink-0">TRENCH</div>
+                            <span class="text-slate-300">Manila & Philippine Subduction Trenches</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="volcanoes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Archipelagic Volcanism</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Active Volcanoes Catalog</h2>
+                    <p class="text-slate-400 mt-2 text-base">Browse major stratovolcanoes fueled by the Pacific Ring of Fire subduction zones.</p>
+                </div>
+                <div class="w-full md:w-72">
+                    <input type="text" id="volcano-search" onkeyup="filterVolcanoList()" placeholder="Search volcano name..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="volcano-grid">
+                <div onclick="openModal('Mayon Volcano')" class="volcano-card bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition cursor-pointer group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1609137144881-540b5912211e?auto=format&fit=crop&w=600&q=80" alt="Mayon" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 bg-orange-600/90 backdrop-blur-md rounded-lg text-xs font-bold text-white">Stratovolcano</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs text-orange-400 font-semibold uppercase">Albay, Bicol Region</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Mayon Volcano</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">World-famous for its nearly perfect symmetrical cone shape. Highly active with frequent strombolian eruptions.</p>
+                    </div>
+                </div>
+
+                <div onclick="openModal('Mt. Pinatubo')" class="volcano-card bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition cursor-pointer group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Pinatubo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 bg-red-600/90 backdrop-blur-md rounded-lg text-xs font-bold text-white">Ultra-Plinian</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs text-orange-400 font-semibold uppercase">Zambales / Tarlac</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Mt. Pinatubo</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">Site of the colossal June 1991 eruption—the second largest volcanic eruption of the 20th century.</p>
+                    </div>
+                </div>
+
+                <div onclick="openModal('Taal Volcano')" class="volcano-card bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition cursor-pointer group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Taal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 bg-amber-600/90 backdrop-blur-md rounded-lg text-xs font-bold text-white">Caldera</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs text-orange-400 font-semibold uppercase">Batangas, Luzon</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Taal Volcano</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">A complex volcano situated on an island within a lake, renowned as one of the world's most dangerous active caldera systems.</p>
+                    </div>
+                </div>
+
+                <div onclick="openModal('Mt. Kanlaon')" class="volcano-card bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-orange-500/50 transition cursor-pointer group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Kanlaon" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 right-3 px-2.5 py-1 bg-orange-600/90 backdrop-blur-md rounded-lg text-xs font-bold text-white">Stratovolcano</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs text-orange-400 font-semibold uppercase">Negros Island</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Mt. Kanlaon</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">The highest peak in Negros, featuring multiple craters and frequent phreatic eruptions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="earthquakes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Seismic History</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Major Earthquakes Catalog</h2>
+                    <p class="text-slate-400 mt-2 text-base">Key seismic events generated along subduction interfaces and crustal fault systems.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div onclick="openModal('1990 Luzon M7.8')" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-orange-500/50 transition cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 border border-red-500/40 rounded-full text-xs font-bold">Magnitude 7.8</span>
+                            <span class="text-slate-400 text-xs font-medium">July 16, 1990</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">1990 Luzon Earthquake</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Caused by sudden movement along the Philippine Fault Zone. Produced a 125 km-long surface rupture spanning from Dingalan to La Union.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs text-slate-400">
+                        <span>Epicenter: Rizal, Nueva Ecija</span>
+                        <span class="text-orange-400 font-semibold">View Details &rarr;</span>
+                    </div>
+                </div>
+
+                <div onclick="openModal('1976 Moro Gulf M8.0')" class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-orange-500/50 transition cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-red-600/20 text-red-400 border border-red-500/40 rounded-full text-xs font-bold">Magnitude 8.0</span>
+                            <span class="text-slate-400 text-xs font-medium">August 17, 1976</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">1976 Moro Gulf Earthquake</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Originating along the Cotabato Trench. Generated catastrophic tsunami waves up to 9 meters high affecting coastal communities.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs text-slate-400">
+                        <span>Epicenter: Moro Gulf, Mindanao</span>
+                        <span class="text-orange-400 font-semibold">View Details &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 lg:p-12">
+                <span class="px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase">Challenge 1 Conclusion</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3 mb-6">Summary of Philippine Tectonic Activity</h2>
+                <div class="space-y-4 text-slate-300 text-base leading-relaxed">
+                    <p>
+                        The Philippine Archipelago's unique position inside the Pacific Ring of Fire makes it a natural geological laboratory. The continuous convergence between the Philippine Sea Plate and Eurasian Plate generates intense subduction at surrounding deep trenches like the Manila and Philippine trenches.
+                    </p>
+                    <p>
+                        This subduction fuels a rich arc of active stratovolcanoes like Mayon, Pinatubo, and Taal, while simultaneously triggering severe seismic faults such as the Philippine Fault Zone and historical earthquakes.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-800 flex flex-wrap gap-4">
+                    <a href="#interactive-map" class="px-6 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm transition">Back to Interactive Map</a>
+                    <a href="#cover" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition">Back to Top</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-[#0f172a] border border-slate-800 rounded-3xl overflow-hidden max-w-md w-full shadow-2xl relative transform transition-all animate-in fade-in zoom-in-95 duration-200">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition">
+                &times;
+            </button>
+
+            <!-- Image Header with Top-Left Badge matching reference image -->
+            <div class="relative h-56 w-full overflow-hidden">
+                <img id="modal-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Feature Image" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent"></div>
+                <div class="absolute top-4 left-4 px-3 py-1 rounded-lg text-xs font-black text-white uppercase tracking-wider shadow-lg modal-tag" id="modal-tag">VOLCANO</div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6">
+                <h3 class="text-2xl font-black text-white mb-1" id="modal-title">MOUNT KANLAON</h3>
+                <p class="text-sm font-semibold text-orange-400 mb-4" id="modal-subtitle">Stratovolcano (Active) &bull; Elevation: 2,465 m</p>
+
+                <div class="space-y-3 text-sm text-slate-300">
+                    <div class="flex items-start">
+                        <strong class="text-slate-400 w-28 flex-shrink-0">Location:</strong>
+                        <span id="modal-location" class="text-slate-200">Negros Island, Visayas</span>
+                    </div>
+                    <div class="flex items-start">
+                        <strong class="text-slate-400 w-28 flex-shrink-0">Subduction:</strong>
+                        <span id="modal-subduction" class="text-slate-200">Negros Trench Subduction Zone</span>
+                    </div>
+                    <div class="flex items-start">
+                        <strong class="text-slate-400 w-28 flex-shrink-0">History:</strong>
+                        <span id="modal-history" class="text-slate-200">30+ recorded (Recent: 2024)</span>
+                    </div>
+                    <div class="flex items-start">
+                        <strong class="text-slate-400 w-28 flex-shrink-0">Primary Hazards:</strong>
+                        <span id="modal-hazards" class="text-amber-400 font-medium">Phreatic Explosions, Pyroclastic Ash</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-right">
+                    <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs uppercase tracking-wider transition">
+                        Close Inspector
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>CHALLENGE 1: Ring of Fire - Philippine Archipelago Model Educational Web Application &copy; 2026</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
